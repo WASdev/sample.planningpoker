@@ -63,50 +63,25 @@
 
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
                 <executions>
                     <execution>
-                        <id>copy-resources</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
+                        <phase>package</phase>
                         <configuration>
-                            <outputDirectory>${project.build.directory}/usr/servers/PlanningPoker</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/wlp</directory>
-                                    <filtering>true</filtering>
-                                </resource>
-                            </resources>
+                            <tasks>
+                              <mkdir dir="${project.build.directory}/usr/servers/PlanningPoker"/>
+                              <copy todir="${project.build.directory}/usr/servers/PlanningPoker">
+                                    <fileset dir="src/main/wlp"/>
+                              </copy>
+                              <mkdir dir="${project.build.directory}/usr/servers/PlanningPoker/apps"/>
+                              <copy file="${project.build.directory}/${project.build.finalName}.war"
+                                    tofile="${project.build.directory}/usr/servers/PlanningPoker/apps/PlanningPoker.war"/>
+                            </tasks>
                         </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>copy</id>
-                        <phase>install</phase>
                         <goals>
-                            <goal>copy</goal>
+                           <goal>run</goal>
                         </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>${project.artifactId}</artifactId>
-                                    <version>${project.version}</version>
-                                    <type>war</type>
-                                    <overWrite>false</overWrite>
-                                    <outputDirectory>${project.build.directory}/usr/servers/PlanningPoker/apps</outputDirectory>
-                                    <destFileName>PlanningPoker.war</destFileName>
-                                </artifactItem>
-                            </artifactItems>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>

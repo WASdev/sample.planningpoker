@@ -11,14 +11,14 @@ Sample planning poker application using WebSockets. Allows real-time chat and pl
 4. Import the sample into Eclipse using *File -> Import -> Maven -> Existing Maven Projects* option.
 5. Create a new Liberty profile server. Make sure the server has the *websocket-1.0* feature enabled.
 6. Deploy the sample into Liberty server. Right click on the *planningpoker* sample and select *Run As -> Run on Server* option. Find and select the Liberty profile server and press *Finish*. 
-7. Go to: [http://localhost/PlanningPoker](http://localhost/PlanningPoker)
+7. Go to: [http://localhost:9080/PlanningPoker](http://localhost:9080/PlanningPoker)
 
 ## Building
 
-The sample can be build using [Apache Maven](http://maven.apache.org/).
+The sample can be built and run using [Apache Maven](http://maven.apache.org/).
 
 ```bash
-$ mvn install
+mvn clean install liberty:start-server
 ```
 
 ## Deploying to Bluemix
@@ -29,7 +29,7 @@ Click the button below to deploy your own copy of this application to [Bluemix](
 
 # Notice
 
-© Copyright IBM Corporation 2014.
+© Copyright IBM Corporation 2017.
 
 # License
 

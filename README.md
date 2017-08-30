@@ -3,15 +3,12 @@ Planning Poker Sample
 
 Sample planning poker application using WebSockets. Allows real-time chat and planning poker-style voting. Also includes multiple rooms and a synchronized iframe so that everyone in the room can be looking at the same webpages at the same time.
 
+For more information about the sample, including a video demonstrating how to use the app, see (WebSocket sample application on WASdev.net)[https://developer.ibm.com/wasdev/blog/2014/12/17/websocket-sample-application/]
+
 ## Running in Eclipse
 
-1. Download and install [Eclipse with the WebSphere Developer Tools](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/).
-2. Create a new Liberty Profile Server. See [step 3](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/) for details.
-3. Clone this repository.
-4. Import the sample into Eclipse using *File -> Import -> Maven -> Existing Maven Projects* option.
-5. Create a new Liberty profile server. Make sure the server has the *websocket-1.0* feature enabled.
-6. Deploy the sample into Liberty server. Right click on the *planningpoker* sample and select *Run As -> Run on Server* option. Find and select the Liberty profile server and press *Finish*. 
-7. Go to: [http://localhost:9080/PlanningPoker](http://localhost:9080/PlanningPoker)
+See (Building and running Liberty apps with Maven in Eclipse)[https://developer.ibm.com/wasdev/docs/building-liberty-apps-maven-in-eclipse/].
+
 
 ## Building
 

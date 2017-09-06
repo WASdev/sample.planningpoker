@@ -18,6 +18,15 @@ The sample can be built and run using [Apache Maven](http://maven.apache.org/).
 mvn clean install liberty:start-server
 ```
 
+## Acccesing App
+
+Visit:
+
+```bash
+http://localhost:9080/PlanningPoker/
+```
+
+
 ## Deploying to Bluemix
 
 Click the button below to deploy your own copy of this application to [Bluemix](https://bluemix.net). Once the application is deployed, visit *http://&lt;yourAppName&gt;.mybluemix.net/PlanningPoker* to access the application. 

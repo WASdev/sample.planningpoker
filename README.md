@@ -1,6 +1,8 @@
 Planning Poker Sample
 =====================
 
+**This repository is no longer being maintained and has been archived. It is left for reference and available for use as-is with the advisory that it depends old dependencies which may have security vulnerabilties.**
+
 Sample planning poker application using WebSockets. Allows real-time chat and planning poker-style voting. Also includes multiple rooms and a synchronized iframe so that everyone in the room can be looking at the same webpages at the same time.
 
 For more information about the sample, including a video demonstrating how to use the app, see [WebSocket sample application on WASdev.net](https://developer.ibm.com/wasdev/blog/2014/12/17/websocket-sample-application/)
